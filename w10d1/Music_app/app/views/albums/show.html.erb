@@ -1,0 +1,18 @@
+<br> 
+<h2><%= @album.title %></h2>
+<br>
+
+<h3>By: <%= @band.name %></h3>
+
+<h3>Year: <%= @album.year  %></h3>
+
+
+
+<h3>Type: 
+    <%= @album.studio ? "Studio" : "Live" %>
+</h3>
+<br>
+
+<h5><a href="<%= band_url(@band) %>">Back to Band's Page</a></h5>
+
+<h5> <a href="<%= bands_url %>">Back to All Bands</a> </h5>

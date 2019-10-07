@@ -1,0 +1,21 @@
+
+<h2><%= @band.name %></h2>
+
+<ul> 
+<% @band.albums.each do |album| %>
+<li> <a href="<%= album_url(album) %>"> <%=album.title%> </a></li>
+<% end %>
+</ul>
+
+<h4><a href="<%= new_band_album_url(@band.id) %>">Add Album</a><h4>
+<h4><a href="<%= bands_url %>">Show All Bands</a></h4>
+
+ <h5><a href="<%= edit_band_url(@band) %>">Edit Band</a></h5>
+<form action="<%= band_url(@band) %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Band">
+</form>
+
+
+
+

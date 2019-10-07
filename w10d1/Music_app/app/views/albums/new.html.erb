@@ -1,0 +1,40 @@
+<h2>Create a New Album: </h2>
+
+
+<h4>Band Name:
+<% @band = Band.find(params[:band_id])  %>
+<%= @band.name %> 
+</h4>
+
+<form action="<%= albums_url %>" method="POST">
+
+  <label>Title:
+    <input type="text" name="album[title]">
+  </label>
+
+  <label>Year: 
+    <input type="text" name="album[year]">
+  </label>
+<br><br>
+  <label>Live or Studio: 
+    <br>
+    <input type="radio" name="album[studio]" value="studio">Studio<br>
+    <input type="radio" name="album[studio]" value="live">Live<br>
+    <!--<select name="album[studio]">
+        <option selected disabled>--Live or Studio--</option>
+        <option value="live">Live</option>
+        <option value="studio">Studio</option>
+    </select>-->
+    
+  </label>
+
+  
+    <input type="hidden" name="album[band_id]" value="<%= params[:band_id] %>">
+  <br><br>
+    <input type="submit" value="Submit Album">
+    
+</form>
+
+<br><br><br>
+<h5><a href="<%= band_url(@band) %>">Back to Band's Page</a></h5>
+<h5> <a href="<%= bands_url %>">Back to All Bands</a> </h5>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      body {
+        background-color: lavender;
+      }
+      body h1 {
+        font-style: italic;
+        font-family: "Andale Mono";
+      }
+      body h2 {
+        font-family: "Andale Mono";
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>MusicApp</h1>
+    <%= flash[:errors] if flash[:errors] %>
+    <%= yield %>
+    
+    <br>
+   <h3> <%= current_user.email if logged_in?%> </h3>
+    <%if logged_in?%>
+      <form action="<%= session_url %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+
+        <input type="submit" value="Logout">
+      </form>
+    <%else%>
+      <form action="<%=new_session_url%>"  method="GET">
+        <input type="submit" value="Login">
+      </form>
+    <%end%>
+  </body>
+</html>
