@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  background: rgb(236, 231, 212);
+  font-size: 2.5vw;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+  margin: 0px;
+}
+
+.session_actions {
+  display: inline-block;
+  justify-content: center;
+  background: white;
+  width: 30%;
+  height: 20%;
+  position: absolute; 
+  top: 30%;
+  left: 35%;
+  border-radius: 10px;
+
+}
+
+header {
+
+}
+.sign_up {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 15%;
+  padding-bottom: 0;
+  vertical-align: middle;
+  height: 40px;
+  width: 80%;
+  font-size: 3vw;
+}
+
+.sign_in {
+  display: inline-block;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 12%;
+  padding-bottom: 5%;
+  height: 35%;
+  width: 80%;
+  font-size: 3vw;
+  border-top: 3px solid black;
+}
